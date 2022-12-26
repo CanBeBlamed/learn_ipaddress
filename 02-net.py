@@ -38,6 +38,7 @@ def main():
         net_cidr = input('CIDR: ')
         network_object = netValid(net_cidr)
 
+        # while loop, asks for CIDR until valid CIDR entered
         while not network_object:
             print('Invalid CIDR')
             net_cidr = input('CIDR: ')

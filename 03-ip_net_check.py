@@ -37,6 +37,9 @@ def main():
     try:
         ip_address = input('IP address: ')
         ip_object = ipValid(ip_address)
+        print(ip_object)
+
+        # while loop, asks for IP address until valid IP address entered
         while not ip_object:
             print('Invalid IP address!')
             ip_address = input('IP address: ')
@@ -44,6 +47,8 @@ def main():
             
         net_cidr = input('CIDR: ')
         net_object = netValid(net_cidr)
+        
+        # while loop, asks for CIDR until valid CIDR entered
         while not net_object:
             print('Invalid CIDR!')
             net_cidr = input('CIDR: ')

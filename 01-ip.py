@@ -20,6 +20,7 @@ def main():
         input_ip = input('IP address: ')
         ip_object = ipValid(input_ip)
 
+        # while loop, asks for IP address until valid IP address entered
         while not ip_object:
             print('Invalid IP address')
             input_ip = input('IP address: ')
