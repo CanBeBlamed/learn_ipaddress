@@ -1,4 +1,4 @@
-from ipaddress import IPv4Address, AddressValueError, IPv4Network
+from ipaddress import IPv4Address, AddressValueError, IPv4Network, NetmaskValueError
 
 def ipValid(ip_address):
 
@@ -44,7 +44,7 @@ def main():
             
         net_cidr = input('CIDR: ')
         net_object = netValid(net_cidr)
-        while not ip_object:
+        while not net_object:
             print('Invalid CIDR!')
             net_cidr = input('CIDR: ')
             net_object = netValid(net_cidr)
