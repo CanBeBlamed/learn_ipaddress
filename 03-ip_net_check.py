@@ -1,6 +1,12 @@
 from ipaddress import IPv4Address, AddressValueError, IPv4Network
 
 def ipValid(ip_address):
+
+    '''
+    Validates IP address. If IP address is valid, it returns the ipadress.IPv4Address object,
+    if not valid it returns None
+    '''
+
     try:
         ip_obj = IPv4Address(ip_address)
         return ip_obj
@@ -9,6 +15,11 @@ def ipValid(ip_address):
         pass
 
 def netValid(cidr):
+
+    '''
+    Validates CIDR. If CIDR address is valid, it returns the ipadress.IPv4Network object,
+    if not valid it returns None
+    '''
 
     try:
         network_object = IPv4Network(cidr, strict=False)

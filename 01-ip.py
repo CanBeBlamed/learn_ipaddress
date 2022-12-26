@@ -1,6 +1,12 @@
 from ipaddress import IPv4Address, AddressValueError
 
 def ipValid(ip_address):
+
+    '''
+    Validates IP address. If IP address is valid, it returns the ipadress.IPv4Address object,
+    if not valid it returns None
+    '''
+
     try:
         ip_obj = IPv4Address(ip_address)
         return ip_obj
